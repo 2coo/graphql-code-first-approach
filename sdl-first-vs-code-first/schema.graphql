@@ -1,0 +1,37 @@
+type Order {
+  createdUserId: Int!
+
+  """The ID of the order"""
+  id: Int!
+
+  """The items in the order"""
+  items: [OrderItem!]!
+
+  """The total price of the order"""
+  total: Float!
+}
+
+type OrderItem {
+  """The ID of the order item"""
+  id: Int!
+
+  """The name of the order item"""
+  name: String!
+
+  """The price of the order item"""
+  price: Float!
+}
+
+type Query {
+  order(id: Int!): Order!
+  orders(gtTotal: Float): [Order!]!
+  user(id: Int!): User!
+  users(nameIncludes: String): [User!]!
+}
+
+type User {
+  id: Int!
+
+  """The name of the user"""
+  name: String!
+}

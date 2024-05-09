@@ -1,0 +1,22 @@
+{
+  "name": "dummy-rest-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch --clear-screen=false server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hono/node-server": "^1.11.1",
+    "@hono/zod-validator": "^0.2.1",
+    "hono": "^4.3.3",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "tsx": "^4.9.3"
+  }
+}

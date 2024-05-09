@@ -1,0 +1,16 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "bradlc.vscode-tailwindcss",
+    "svelte.svelte-vscode",
+    "moalamri.inline-fold",
+    "usernamehw.errorlens",
+    "wallabyjs.console-ninja",
+    "dracula-theme.theme-dracula",
+    "vscode-icons-team.vscode-icons",
+    "christian-kohler.path-intellisense",
+    "kisstkondoros.vscode-gutter-preview",
+    "graphql.vscode-graphql"
+  ]
+}

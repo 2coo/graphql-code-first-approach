@@ -1,0 +1,41 @@
+{
+  "name": "frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently --restart-retries -1 -k -c \"green,bgCyan\"  --names \"VITE,CODEGEN\" \"vite\" \"wait-on tcp:4000 && graphql-codegen -w\"",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@urql/core": "^5.0.3",
+    "bignumber.js": "^9.1.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "ts-pattern": "^5.1.1",
+    "urql": "^4.0.7",
+    "urql-custom-scalars-exchange": "^1.0.1"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^4.0.1",
+    "@graphql-codegen/client-preset": "^4.2.5",
+    "@graphql-codegen/introspection": "^4.0.3",
+    "@graphql-eslint/eslint-plugin": "^3.20.1",
+    "@graphql-typed-document-node/core": "^3.2.0",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "graphql": "^16.8.1",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "wait-on": "^7.2.0"
+  }
+}
