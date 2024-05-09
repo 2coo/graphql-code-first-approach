@@ -1,3 +1,10 @@
+type Human implements User {
+  id: Int!
+  name: String!
+  registrationNumber: String!
+  type: UserType!
+}
+
 type Order {
   createdUserId: Int!
 
@@ -29,9 +36,23 @@ type Query {
   users(nameIncludes: String): [User!]!
 }
 
-type User {
+type Robot implements User {
   id: Int!
-
-  """The name of the user"""
+  modelNumber: String!
   name: String!
+  type: UserType!
+}
+
+interface User {
+  id: Int!
+  name: String!
+  type: UserType!
+}
+
+enum UserType {
+  """A human user"""
+  HUMAN
+
+  """A robot user"""
+  ROBOT
 }

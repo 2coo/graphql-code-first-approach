@@ -1,7 +1,30 @@
 export const dummyUsers = [
-  { id: 1, name: "Tuco Salamanca" },
-  { id: 2, name: "Gustavo Fring" },
-  { id: 3, name: "Walter White" },
+  {
+    id: 1,
+    name: "Tuco Salamanca",
+    type: "Human",
+    registrationNumber: "УБ-123",
+  },
+  { id: 2, name: "Gustavo Fring", type: "Human", registrationNumber: "УБ-456" },
+  { id: 3, name: "Walter White", type: "Human", registrationNumber: "УБ-789" },
+  {
+    id: 4,
+    name: "Wall-E",
+    type: "Robot",
+    modelNumber: "A-113",
+  },
+  {
+    id: 5,
+    name: "R2-D2",
+    type: "Robot",
+    modelNumber: "R2-D2",
+  },
+  {
+    id: 6,
+    name: "C-3PO",
+    type: "Robot",
+    modelNumber: "C-3PO",
+  },
 ];
 
 export const dummyOrders = [

@@ -7,6 +7,13 @@ const UserListFragment = graphql(`
     users {
       id
       name
+      type
+      ... on Human {
+        registrationNumber
+      }
+      ... on Robot {
+        modelNumber
+      }
     }
   }
 `);
@@ -26,7 +33,33 @@ const UserList: FC<{
           ({ users }) => (
             <ul>
               {users.map((user) => (
-                <li key={user.id}>{user.name}</li>
+                <li key={user.id}>
+                  {match(user)
+                    .returnType<ReactNode>()
+                    .with(
+                      {
+                        __typename: "Human",
+                      },
+                      (user) => (
+                        <>
+                          "👤"
+                          {user.name} ({user.registrationNumber})
+                        </>
+                      )
+                    )
+                    .with(
+                      {
+                        __typename: "Robot",
+                      },
+                      (user) => (
+                        <>
+                          "🤖"
+                          {user.name} ({user.modelNumber})
+                        </>
+                      )
+                    )
+                    .exhaustive()}
+                </li>
               ))}
             </ul>
           )

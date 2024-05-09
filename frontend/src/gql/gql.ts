@@ -16,7 +16,7 @@ const documents = {
     "\n  query HomePageData {\n    ...OrderListData\n    ...UserListData\n  }\n": types.HomePageDataDocument,
     "\n  fragment OrderItemData on OrderItem {\n    id\n    name\n    price\n  }\n": types.OrderItemDataFragmentDoc,
     "\n  fragment OrderListData on Query {\n    orders {\n      id\n      total\n      items {\n        ...OrderItemData\n      }\n    }\n  }\n": types.OrderListDataFragmentDoc,
-    "\n  fragment UserListData on Query {\n    users {\n      id\n      name\n    }\n  }\n": types.UserListDataFragmentDoc,
+    "\n  fragment UserListData on Query {\n    users {\n      id\n      name\n      type\n      ... on Human {\n        registrationNumber\n      }\n      ... on Robot {\n        modelNumber\n      }\n    }\n  }\n": types.UserListDataFragmentDoc,
 };
 
 /**
@@ -48,7 +48,7 @@ export function graphql(source: "\n  fragment OrderListData on Query {\n    orde
 /**
  * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
-export function graphql(source: "\n  fragment UserListData on Query {\n    users {\n      id\n      name\n    }\n  }\n"): (typeof documents)["\n  fragment UserListData on Query {\n    users {\n      id\n      name\n    }\n  }\n"];
+export function graphql(source: "\n  fragment UserListData on Query {\n    users {\n      id\n      name\n      type\n      ... on Human {\n        registrationNumber\n      }\n      ... on Robot {\n        modelNumber\n      }\n    }\n  }\n"): (typeof documents)["\n  fragment UserListData on Query {\n    users {\n      id\n      name\n      type\n      ... on Human {\n        registrationNumber\n      }\n      ... on Robot {\n        modelNumber\n      }\n    }\n  }\n"];
 
 export function graphql(source: string) {
   return (documents as any)[source] ?? {};
