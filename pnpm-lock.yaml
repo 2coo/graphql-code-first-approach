@@ -4,84 +4,107 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-dependencies:
-  '@urql/core':
-    specifier: ^5.0.3
-    version: 5.0.3(graphql@16.8.1)
-  bignumber.js:
-    specifier: ^9.1.2
-    version: 9.1.2
-  react:
-    specifier: ^18.2.0
-    version: 18.3.1
-  react-dom:
-    specifier: ^18.2.0
-    version: 18.3.1(react@18.3.1)
-  ts-pattern:
-    specifier: ^5.1.1
-    version: 5.1.1
-  urql:
-    specifier: ^4.0.7
-    version: 4.0.7(graphql@16.8.1)(react@18.3.1)
-  urql-custom-scalars-exchange:
-    specifier: ^1.0.1
-    version: 1.0.1(@urql/core@5.0.3)(graphql@16.8.1)(wonka@6.3.4)
+importers:
 
-devDependencies:
-  '@graphql-codegen/cli':
-    specifier: ^4.0.1
-    version: 4.0.1(graphql@16.8.1)(typescript@5.4.5)
-  '@graphql-codegen/client-preset':
-    specifier: ^4.2.5
-    version: 4.2.5(graphql@16.8.1)
-  '@graphql-codegen/introspection':
-    specifier: ^4.0.3
-    version: 4.0.3(graphql@16.8.1)
-  '@graphql-eslint/eslint-plugin':
-    specifier: ^3.20.1
-    version: 3.20.1(@babel/core@7.24.5)(graphql@16.8.1)
-  '@graphql-typed-document-node/core':
-    specifier: ^3.2.0
-    version: 3.2.0(graphql@16.8.1)
-  '@types/react':
-    specifier: ^18.2.66
-    version: 18.3.1
-  '@types/react-dom':
-    specifier: ^18.2.22
-    version: 18.3.0
-  '@typescript-eslint/eslint-plugin':
-    specifier: ^7.2.0
-    version: 7.8.0(@typescript-eslint/parser@7.8.0)(eslint@8.57.0)(typescript@5.4.5)
-  '@typescript-eslint/parser':
-    specifier: ^7.2.0
-    version: 7.8.0(eslint@8.57.0)(typescript@5.4.5)
-  '@vitejs/plugin-react':
-    specifier: ^4.2.1
-    version: 4.2.1(vite@5.2.11)
-  concurrently:
-    specifier: ^8.2.2
-    version: 8.2.2
-  eslint:
-    specifier: ^8.57.0
-    version: 8.57.0
-  eslint-plugin-react-hooks:
-    specifier: ^4.6.0
-    version: 4.6.2(eslint@8.57.0)
-  eslint-plugin-react-refresh:
-    specifier: ^0.4.6
-    version: 0.4.7(eslint@8.57.0)
-  graphql:
-    specifier: ^16.8.1
-    version: 16.8.1
-  typescript:
-    specifier: ^5.2.2
-    version: 5.4.5
-  vite:
-    specifier: ^5.2.0
-    version: 5.2.11
-  wait-on:
-    specifier: ^7.2.0
-    version: 7.2.0
+  .: {}
+
+  dummy-rest-api:
+    dependencies:
+      '@hono/node-server':
+        specifier: ^1.11.1
+        version: 1.11.1
+      '@hono/zod-validator':
+        specifier: ^0.2.1
+        version: 0.2.1(hono@4.3.4)(zod@3.23.8)
+      hono:
+        specifier: ^4.3.3
+        version: 4.3.4
+      zod:
+        specifier: ^3.23.8
+        version: 3.23.8
+    devDependencies:
+      tsx:
+        specifier: ^4.9.3
+        version: 4.9.3
+
+  frontend:
+    dependencies:
+      '@urql/core':
+        specifier: ^5.0.3
+        version: 5.0.3(graphql@16.8.1)
+      bignumber.js:
+        specifier: ^9.1.2
+        version: 9.1.2
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+      ts-pattern:
+        specifier: ^5.1.1
+        version: 5.1.1
+      urql:
+        specifier: ^4.0.7
+        version: 4.0.7(graphql@16.8.1)(react@18.3.1)
+      urql-custom-scalars-exchange:
+        specifier: ^1.0.1
+        version: 1.0.1(@urql/core@5.0.3)(graphql@16.8.1)(wonka@6.3.4)
+    devDependencies:
+      '@graphql-codegen/cli':
+        specifier: ^4.0.1
+        version: 4.0.1(graphql@16.8.1)(typescript@5.4.5)
+      '@graphql-codegen/client-preset':
+        specifier: ^4.2.5
+        version: 4.2.5(graphql@16.8.1)
+      '@graphql-codegen/introspection':
+        specifier: ^4.0.3
+        version: 4.0.3(graphql@16.8.1)
+      '@graphql-eslint/eslint-plugin':
+        specifier: ^3.20.1
+        version: 3.20.1(@babel/core@7.24.5)(graphql@16.8.1)
+      '@graphql-typed-document-node/core':
+        specifier: ^3.2.0
+        version: 3.2.0(graphql@16.8.1)
+      '@types/react':
+        specifier: ^18.2.66
+        version: 18.3.1
+      '@types/react-dom':
+        specifier: ^18.2.22
+        version: 18.3.0
+      '@typescript-eslint/eslint-plugin':
+        specifier: ^7.2.0
+        version: 7.8.0(@typescript-eslint/parser@7.8.0)(eslint@8.57.0)(typescript@5.4.5)
+      '@typescript-eslint/parser':
+        specifier: ^7.2.0
+        version: 7.8.0(eslint@8.57.0)(typescript@5.4.5)
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.2.1(vite@5.2.11)
+      concurrently:
+        specifier: ^8.2.2
+        version: 8.2.2
+      eslint:
+        specifier: ^8.57.0
+        version: 8.57.0
+      eslint-plugin-react-hooks:
+        specifier: ^4.6.0
+        version: 4.6.2(eslint@8.57.0)
+      eslint-plugin-react-refresh:
+        specifier: ^0.4.6
+        version: 0.4.7(eslint@8.57.0)
+      graphql:
+        specifier: ^16.8.1
+        version: 16.8.1
+      typescript:
+        specifier: ^5.2.2
+        version: 5.4.5
+      vite:
+        specifier: ^5.2.0
+        version: 5.2.11
+      wait-on:
+        specifier: ^7.2.0
+        version: 7.2.0
 
 packages:
 
@@ -1854,6 +1877,21 @@ packages:
       '@hapi/hoek': 9.3.0
     dev: true
 
+  /@hono/node-server@1.11.1:
+    resolution: {integrity: sha512-GW1Iomhmm1o4Z+X57xGby8A35Cu9UZLL7pSMdqDBkD99U5cywff8F+8hLk5aBTzNubnsFAvWQ/fZjNwPsEn9lA==}
+    engines: {node: '>=18.14.1'}
+    dev: false
+
+  /@hono/zod-validator@0.2.1(hono@4.3.4)(zod@3.23.8):
+    resolution: {integrity: sha512-HFoxln7Q6JsE64qz2WBS28SD33UB2alp3aRKmcWnNLDzEL1BLsWfbdX6e1HIiUprHYTIXf5y7ax8eYidKUwyaA==}
+    peerDependencies:
+      hono: '>=3.9.0'
+      zod: ^3.19.1
+    dependencies:
+      hono: 4.3.4
+      zod: 3.23.8
+    dev: false
+
   /@humanwhocodes/config-array@0.11.14:
     resolution: {integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg==}
     engines: {node: '>=10.10.0'}
@@ -3441,6 +3479,12 @@ packages:
     engines: {node: 6.* || 8.* || >= 10.*}
     dev: true
 
+  /get-tsconfig@4.7.4:
+    resolution: {integrity: sha512-ofbkKj+0pjXjhejr007J/fLf+sW+8H7K5GCm+msC8q3IpvgjobpyPqSRFemNyIMxklC0zeJpi7VDFna19FacvQ==}
+    dependencies:
+      resolve-pkg-maps: 1.0.0
+    dev: true
+
   /glob-parent@5.1.2:
     resolution: {integrity: sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==}
     engines: {node: '>= 6'}
@@ -3623,6 +3667,11 @@ packages:
       capital-case: 1.0.4
       tslib: 2.6.2
     dev: true
+
+  /hono@4.3.4:
+    resolution: {integrity: sha512-oh+PBwW8yElj3bUlY2dTXhuPt1MCZp6Nb04tejLwY+GXdphQH6uCpUP0dY5iLvFY5wM8fNHrMx1QeMKbhnzw9w==}
+    engines: {node: '>=16.0.0'}
+    dev: false
 
   /http-proxy-agent@7.0.2:
     resolution: {integrity: sha512-T1gkAiYYDWYx3V5Bmyu7HcfcvL7mUrTWiM6yOfa3PIphViJ/gFPbvidQ+veqSOHci/PxBcDabeUNCzpOODJZig==}
@@ -4437,6 +4486,10 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
+  /resolve-pkg-maps@1.0.0:
+    resolution: {integrity: sha512-seS2Tj26TBVOC2NIc2rOe2y2ZO7efxITtLZcGSOnHHNOQ7CkiUBfw0Iw2ck6xkIhPwLhKNLS8BO+hEpngQlqzw==}
+    dev: true
+
   /restore-cursor@3.1.0:
     resolution: {integrity: sha512-l+sSefzHpj5qimhFSE5a8nufZYAM3sBSVMAPtYkmC+4EH2anSGaEMXSD0izRQbu9nfyQ9y5JrVmp7E8oZrUjvA==}
     engines: {node: '>=8'}
@@ -4742,6 +4795,17 @@ packages:
 
   /tslib@2.6.2:
     resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
+    dev: true
+
+  /tsx@4.9.3:
+    resolution: {integrity: sha512-czVbetlILiyJZI5zGlj2kw9vFiSeyra9liPD4nG+Thh4pKTi0AmMEQ8zdV/L2xbIVKrIqif4sUNrsMAOksx9Zg==}
+    engines: {node: '>=18.0.0'}
+    hasBin: true
+    dependencies:
+      esbuild: 0.20.2
+      get-tsconfig: 4.7.4
+    optionalDependencies:
+      fsevents: 2.3.3
     dev: true
 
   /type-check@0.4.0:
@@ -5077,3 +5141,7 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
     dev: true
+
+  /zod@3.23.8:
+    resolution: {integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==}
+    dev: false

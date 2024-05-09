@@ -1,0 +1,4 @@
+packages:
+  - dummy-rest-api
+  - frontend
+  - sdl-first-code-first
