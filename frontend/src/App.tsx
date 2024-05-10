@@ -5,6 +5,8 @@ import UserList from "./components/UserList";
 import { graphql } from "./gql";
 import OrderList from "./components/OrderList";
 
+// *NOTE*:
+// eslint will complain if you violate the rules @graphql-eslint/recommended
 const UsersDocument = graphql(`
   query HomePageData {
     ...OrderListData

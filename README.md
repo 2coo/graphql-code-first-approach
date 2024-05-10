@@ -13,7 +13,8 @@
 
 # Client Side:
 - [Codegen](./frontend/codegen.ts)
-- [GraphQL LSP](./frontend/graphql.config.ts)
+- GraphQL LSP
+    - [GraphQL LSP config](./frontend/graphql.config.ts)
     - [Workspace settings](./.vscode/settings.json)
     - [VSCode extension](./.vscode/extensions)
 - [@graphql-eslint](./frontend/.eslintrc.cjs)
