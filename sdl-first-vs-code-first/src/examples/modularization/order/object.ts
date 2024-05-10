@@ -1,6 +1,4 @@
 import { builder } from "~/builder";
-import { UserObject } from "../user";
-import { dummyOrders } from "~/data";
 
 const OrderItemObject = builder.simpleObject("OrderItem", {
   fields: (t) => ({

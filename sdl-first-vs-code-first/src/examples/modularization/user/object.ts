@@ -39,6 +39,7 @@ builder.simpleObject("Human", {
   interfaces: [UserObject],
   fields: (t) => ({
     registrationNumber: t.string({
+      description: "The registration number of the human",
       nullable: false,
     }),
   }),
@@ -48,6 +49,7 @@ builder.simpleObject("Robot", {
   interfaces: [UserObject],
   fields: (t) => ({
     modelNumber: t.string({
+      description: "The model number of the robot",
       nullable: false,
     }),
   }),

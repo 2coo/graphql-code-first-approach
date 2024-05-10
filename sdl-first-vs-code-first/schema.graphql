@@ -1,6 +1,8 @@
 type Human implements User {
   id: Int!
   name: String!
+
+  """The registration number of the human"""
   registrationNumber: String!
   type: UserType!
 }
@@ -38,6 +40,8 @@ type Query {
 
 type Robot implements User {
   id: Int!
+
+  """The model number of the robot"""
   modelNumber: String!
   name: String!
   type: UserType!
